@@ -19,6 +19,7 @@ export class Post {
   @Property({ type: "date", onUpdate: () => new Date() })
   updatedAt: Date = new Date();
 
+  // If you left out field here, will remain private to server and will not be request-able.
   @Field()
   @Property({ type: "text" })
   title!: string;
